@@ -17,16 +17,17 @@ find . -name wp-config.php
 ### *.sql files
 ```
 find . -name \*.sql -exec du -hs {} \;
-```
-
-### *.sql files, sorted by increasing size
-```
-find . -name "*.sql" -exec du -hs {} \; | sort -h
+find . -name "*.sql" -exec du -hs {} \; | sort -h # sort by ascending size
 ```
 
 ### Amazon RDS configuration
 ```
 grep -C 10 -r rds.amazonaws.com --exclude-dir="*/vendor/*"
+```
+
+### Amazon S3
+```
+grep -C 10 -r s3.amazonaws.com --exclude-dir="*/vendor/*"
 ```
 
 ### .env file
@@ -61,10 +62,6 @@ grep -r -F \
 find . -type f -name "*upload*.php"
 ```
 
-```
-find . -type f -name \*upload\*.php
-```
-
 ### Find sussy bakas
 ```
 grep -r -F \
@@ -90,6 +87,6 @@ grep -r -F \
 
 ### Private keys
 ```
-grep -r -F -i -E "BEGIN (\w+) PRIVATE KEY" \
+grep -r -F -i -E "^-----BEGIN (\w+) PRIVATE KEY" \
   --exclude-dir="*/vendor"
 ```
