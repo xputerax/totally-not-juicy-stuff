@@ -1,7 +1,7 @@
 
 ### CodeIgniter database configuration
 ```
-find . -path config/database.php
+find . -path "*/config/database.php"
 ```
 
 ### Database configuration (generic)
@@ -54,7 +54,7 @@ grep -r -F \
 grep -r -F \
   --include=\*.php \
   --exclude-dir=\*{vendor,wp-includes,vendor_prefixed} \
-  -e move_uploaded_file
+  -e move_uploaded_file \
   -e \$_FILES
 ```
 
