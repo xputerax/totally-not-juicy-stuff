@@ -5,6 +5,8 @@
 
 # Configuration files
 
+- "index of /application/configs/"
+
 # SQL Injection
 
 # Data leaks
