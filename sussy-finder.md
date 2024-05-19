@@ -90,3 +90,9 @@ grep -r -F \
 grep -r -F -i -E "^-----BEGIN (\w+) PRIVATE KEY" \
   --exclude-dir="*/vendor"
 ```
+
+### Propel ORM Config
+
+```
+find . -name propel.ini
+```
